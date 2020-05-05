@@ -27,6 +27,7 @@ app.use('/api/skill', skillRouter);
 app.use('/api/experience', experienceRouter);
 
 // catch 404 and forward to error handler
+
 app.use(function (req, res, next) {
   next(createError(404));
 });
