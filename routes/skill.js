@@ -11,6 +11,8 @@ router.get('/', function (req, res, next) {
   // 返回 promise
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
   });
 });
 
@@ -23,6 +25,8 @@ router.get('/list/:id', function (req, res, next) {
   // 返回 promise
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
   });
 });
 
@@ -32,6 +36,8 @@ router.post('/', (req, res, next) => {
 
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
   });
 });
 
@@ -41,6 +47,8 @@ router.put('/:id', (req, res, next) => {
 
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
   });
 });
 
@@ -51,6 +59,8 @@ router.delete('/:id', (req, res, next) => {
 
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
   });
 })
 
