@@ -6,8 +6,18 @@ const { SuccessModel, ErrorModel } = require('../model/response-body');
 router.get('/', function (req, res, next) {
   // res.send('skill list');
   let sql = `
-  select s.SkillID,Name,UpdateDate,sum(Exp) as TotalExp from skill as s left join experience as e on e.SkillID=s.SkillID  group by s.SkillID;
+  select 
+    s.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp 
+  from 
+    skill as s left join experience as e on e.SkillID=s.SkillID  
+  and 
+    e.IsDelete=0
+  group by 
+    s.SkillID
+  order by 
+    s.SortIndex desc ,s.CreateDate;
   `;
+
   // 返回 promise
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));

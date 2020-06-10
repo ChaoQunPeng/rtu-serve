@@ -59,5 +59,17 @@ router.put('/:id', (req, res, next) => {
   });
 });
 
+router.get('/detail/:experienceId', (req, res, next) => {
+  const experienceId = req.params.experienceId;
+
+  let sql = `select * from experience where ExperienceId=${experienceId}`;
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
+  });
+});
+
 
 module.exports = router;

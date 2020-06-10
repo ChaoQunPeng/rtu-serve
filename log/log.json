@@ -1,0 +1,269 @@
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-08 21:05:59",
+  "userId": 0
+},
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-08 21:17:56",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_EMPTY_QUERY",
+    "errno": 1065,
+    "sqlMessage": "Query was empty",
+    "sqlState": "42000",
+    "index": 0,
+    "sql": "\n  \n  "
+  },
+  "method": "GET",
+  "date": "2020-06-08 21:54:40",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_EMPTY_QUERY",
+    "errno": 1065,
+    "sqlMessage": "Query was empty",
+    "sqlState": "42000",
+    "index": 0,
+    "sql": "\n  \n  "
+  },
+  "method": "GET",
+  "date": "2020-06-08 21:54:51",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_TRUNCATED_WRONG_VALUE",
+    "errno": 1292,
+    "sqlMessage": "Incorrect datetime value: 'null' for column 'StartTime' at row 1",
+    "sqlState": "22007",
+    "index": 0,
+    "sql": "\n  insert into experience \n  (Title,Content,SkillID,Exp,StartTime,EndTime,CreateDate) \n  values ('webpack.DefinePlugin()配合cross-env配置环境变量','<p>使用cross-env可以在npm script中配置一个变量，用于获取当前环境类型，例如 <span style=\"color:hsl(0,0%,0%);\"><code>\"start\":&nbsp;“cross-env&nbsp;ENV=prod&nbsp;webpack”</code> &nbsp;之后可以通过 <code>process.env.ENV&nbsp;</code> 来获取到设置的值。</span></p><p><span style=\"color:hsl(0,0%,0%);\">在webpack.config.js中，在plugins中这么写：</span></p><pre><code class=\"language-plaintext\">plugins: [\r\n    new webpack.DefinePlugin({\r\n      \"ENV\": JSON.stringify(process.env.ENV),\r\n      \"URL\": JSON.stringify(process.env.URL)\r\n    })\r\n  ]</code></pre><p>&nbsp;</p><p>这样子的话在编译和打包的时候就会创建全局变量，就可以在浏览器环境获取到对应的环境变量了。</p><p>&nbsp;</p><ul><li><strong>cross-env是设置node环境变量的；</strong></li><li><strong>webpack.DefinePlugin是设置浏览器环境下全局变量的</strong></li></ul><p>&nbsp;</p><p><i>参考资料</i></p><p><a href=\"https://juejin.im/post/5dfa36f9f265da33c90b47ef\"><i>https://juejin.im/post/5dfa36f9f265da33c90b47ef</i></a></p>',41,2,'null','2020-06-08T18:00',now())"
+  },
+  "method": "POST",
+  "date": "2020-06-08 22:59:30",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_TRUNCATED_WRONG_VALUE",
+    "errno": 1292,
+    "sqlMessage": "Incorrect datetime value: 'null' for column 'StartTime' at row 1",
+    "sqlState": "22007",
+    "index": 0,
+    "sql": "\n  insert into experience \n  (Title,Content,SkillID,Exp,StartTime,EndTime,CreateDate) \n  values ('webpack.DefinePlugin()配合cross-env配置环境变量','<p>使用cross-env可以在npm script中配置一个变量，用于获取当前环境类型，例如 <span style=\"color:hsl(0,0%,0%);\"><code>\"start\":&nbsp;“cross-env&nbsp;ENV=prod&nbsp;webpack”</code> &nbsp;之后可以通过 <code>process.env.ENV&nbsp;</code> 来获取到设置的值。</span></p><p><span style=\"color:hsl(0,0%,0%);\">在webpack.config.js中，在plugins中这么写：</span></p><pre><code class=\"language-plaintext\">plugins: [\r\n    new webpack.DefinePlugin({\r\n      \"ENV\": JSON.stringify(process.env.ENV),\r\n      \"URL\": JSON.stringify(process.env.URL)\r\n    })\r\n  ]</code></pre><p>&nbsp;</p><p>这样子的话在编译和打包的时候就会创建全局变量，就可以在浏览器环境获取到对应的环境变量了。</p><p>&nbsp;</p><ul><li><strong>cross-env是设置node环境变量的；</strong></li><li><strong>webpack.DefinePlugin是设置浏览器环境下全局变量的</strong></li></ul><p>&nbsp;</p><p><i>参考资料</i></p><p><a href=\"https://juejin.im/post/5dfa36f9f265da33c90b47ef\"><i>https://juejin.im/post/5dfa36f9f265da33c90b47ef</i></a></p>',41,2,'null','2020-06-08T18:00',now())"
+  },
+  "method": "POST",
+  "date": "2020-06-08 23:01:03",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_TRUNCATED_WRONG_VALUE",
+    "errno": 1292,
+    "sqlMessage": "Incorrect datetime value: 'null' for column 'StartTime' at row 1",
+    "sqlState": "22007",
+    "index": 0,
+    "sql": "\n  insert into experience \n  (Title,Content,SkillID,Exp,StartTime,EndTime,CreateDate) \n  values ('webpack.DefinePlugin()配合cross-env配置环境变量','<p>使用cross-env可以在npm script中配置一个变量，用于获取当前环境类型，例如 <span style=\"color:hsl(0,0%,0%);\"><code>\"start\":&nbsp;“cross-env&nbsp;ENV=prod&nbsp;webpack”</code> &nbsp;之后可以通过 <code>process.env.ENV&nbsp;</code> 来获取到设置的值。</span></p><p><span style=\"color:hsl(0,0%,0%);\">在webpack.config.js中，在plugins中这么写：</span></p><pre><code class=\"language-plaintext\">plugins: [\r\n    new webpack.DefinePlugin({\r\n      \"ENV\": JSON.stringify(process.env.ENV),\r\n      \"URL\": JSON.stringify(process.env.URL)\r\n    })\r\n  ]</code></pre><p>&nbsp;</p><p>这样子的话在编译和打包的时候就会创建全局变量，就可以在浏览器环境获取到对应的环境变量了。</p><p>&nbsp;</p><ul><li><strong>cross-env是设置node环境变量的；</strong></li><li><strong>webpack.DefinePlugin是设置浏览器环境下全局变量的</strong></li></ul><p>&nbsp;</p><p><i>参考资料</i></p><p><a href=\"https://juejin.im/post/5dfa36f9f265da33c90b47ef\"><i>https://juejin.im/post/5dfa36f9f265da33c90b47ef</i></a></p>',41,2,'null','2020-06-08T18:00',now())"
+  },
+  "method": "POST",
+  "date": "2020-06-08 23:01:08",
+  "userId": 0
+},
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:05:08",
+  "userId": 0
+},
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:05:20",
+  "userId": 0
+},
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:05:21",
+  "userId": 0
+},
+{
+  "content": {
+    "message": "Not Found"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:07:16",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:32:42",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:33:15",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:33:29",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:55:33",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 13:56:32",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 14:10:51",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 14:10:59",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 14:12:08",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlMessage": "Unknown column 'undefined' in 'where clause'",
+    "sqlState": "42S22",
+    "index": 0,
+    "sql": "select * from experience where ExperienceId=undefined"
+  },
+  "method": "GET",
+  "date": "2020-06-09 14:12:37",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_PARSE_ERROR",
+    "errno": 1064,
+    "sqlMessage": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    s' at line 2",
+    "sqlState": "42000",
+    "index": 0,
+    "sql": "\n  select \n    .SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    skill as s left join experience as e on e.SkillID=s.SkillID  \n  and \n    e.IsDelete=0\n  group by \n    s.SkillID\n  order by \n    s.SortIndex desc ,s.CreateDate;\n  "
+  },
+  "method": "GET",
+  "date": "2020-06-10 23:05:05",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_PARSE_ERROR",
+    "errno": 1064,
+    "sqlMessage": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    s' at line 2",
+    "sqlState": "42000",
+    "index": 0,
+    "sql": "\n  select \n    .SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    skill as s left join experience as e on e.SkillID=s.SkillID  \n  and \n    e.IsDelete=0\n  group by \n    s.SkillID\n  order by \n    s.SortIndex desc ,s.CreateDate;\n  "
+  },
+  "method": "GET",
+  "date": "2020-06-10 23:05:07",
+  "userId": 0
+},
+{
+  "content": {
+    "code": "ER_PARSE_ERROR",
+    "errno": 1064,
+    "sqlMessage": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    s' at line 2",
+    "sqlState": "42000",
+    "index": 0,
+    "sql": "\n  select \n    .SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp \n  from \n    skill as s left join experience as e on e.SkillID=s.SkillID  \n  and \n    e.IsDelete=0\n  group by \n    s.SkillID\n  order by \n    s.SortIndex desc ,s.CreateDate;\n  "
+  },
+  "method": "GET",
+  "date": "2020-06-10 23:05:11",
+  "userId": 0
+},

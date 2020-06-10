@@ -94,8 +94,6 @@ function write(path, data, options = {}) {
   });
 }
 
-
-
 // function writeLogInFile(err, req, res) {
 //   let data = {
 //     content: err,
