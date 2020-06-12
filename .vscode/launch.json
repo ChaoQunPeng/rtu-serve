@@ -8,7 +8,10 @@
       "type": "node",
       "request": "launch",
       "name":"startupNode",
-      "program": "${workspaceFolder}/bin/www"
+      "program": "${workspaceFolder}/bin/www",
+      "args": [
+        
+      ]
     },
     {
       "type": "chrome",

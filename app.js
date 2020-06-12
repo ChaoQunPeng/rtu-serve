@@ -58,16 +58,17 @@ app.use(function (err, req, res, next) {
   // var accessLogStream = fs.createWriteStream(path.join(__dirname+'\\log\\', 'access.log'), { flags: 'a' })
   // // setup the logger
   // app.use(logger('combined', { stream: accessLogStream }))
-  console.log('开始写入程序！');
+  console.log('程序出现错误，准备写入日志！');
   writeLogInFile(err, req, res);
-
+  
+  console.log(err);
   res.json(new ErrorModel(
-    err.code,
+    500,
     err.msg ? err.msg : "程序出现错误！",
     err
   ));
-});
 
+});
 
 async function writeLogInFile(err, req, res) {
   let date = dayjs().format("YYYY-MM-DD HH:mm:ss");
@@ -88,7 +89,7 @@ function write(path, data, options = {}) {
         reject(err);
       }
       resolve(
-        console.log("写入完成！")
+        console.log("错误日志已写入")
       );
     })
   });

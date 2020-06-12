@@ -6,7 +6,7 @@ const { SuccessModel, ErrorModel } = require('../model/response-body');
 router.get('/', function (req, res, next) {
   // res.send('skill list');
   let sql = `
-  select 
+  select 1
     s.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp 
   from 
     skill as s left join experience as e on e.SkillID=s.SkillID  
@@ -20,7 +20,9 @@ router.get('/', function (req, res, next) {
 
   // 返回 promise
   return exec(sql).then(result => {
-    res.json(new SuccessModel(res.statusCode, '', result));
+    setTimeout(() => {
+      res.json(new SuccessModel(res.statusCode, '', result));
+    }, 1000);
   }).catch(err => {
     next(err);
   });
@@ -30,8 +32,6 @@ router.get('/list/:id', function (req, res, next) {
   // res.send('skill list');
   const id = req.params.id;
   let sql = `select * from skill where SkillID=${id}`;
-
-  console.log(this.item);
   // 返回 promise
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));

@@ -3,6 +3,37 @@ var router = express.Router();
 const { exec } = require('../db/mysql');
 const { SuccessModel, ErrorModel } = require('../model/response-body');
 
+
+// 这个路由必需放上面，动态路由放下面，不然express会找不到
+router.get('/recycle', (req, res, err) => {
+  let sql = `
+  select 
+    s.Name, e.ExperienceID,e.Title,e.Content,e.Exp,e.CreateDate from experience as e 
+  left join 
+    skill as s 
+  on 
+    e.SkillID = s.SkillID 
+  where 
+    e.IsDelete=1`;
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
+  });
+});
+
+router.get('/info', (req, res, next) => {
+  let sql = `select count(*) as recycleCount from experience where IsDelete=1;`;
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+
+  }).catch(err => {
+    next(err);
+  });
+});
+
 router.get('/:skillId', (req, res, next) => {
   const skillId = req.params.skillId;
   let sql = `select * from experience where SkillID=${skillId} and IsDelete=0`;
@@ -42,6 +73,18 @@ router.delete('/:id', (req, res, next) => {
   });
 });
 
+router.delete('/real/:id', (req, res, next) => {
+  const id = req.params.id;
+
+  let sql = `delete from experience where ExperienceID=${id}`;
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
+  });
+});
+
 router.put('/:id', (req, res, next) => {
   const id = req.params.id;
   let sql = `update experience set 
@@ -51,6 +94,17 @@ router.put('/:id', (req, res, next) => {
   StartTime='${req.body.startTime}',
   EndTime='${req.body.endTime}'
   where ExperienceID=${id}`
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
+  });
+});
+
+router.put('/restore/:id', (req, res, next) => {
+  const id = req.params.id;
+  let sql = `update experience set IsDelete = 0 where ExperienceID=${id}`;
 
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
