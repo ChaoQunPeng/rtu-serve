@@ -13,9 +13,10 @@ const MYSQL_CONF = {
 
 // 创建连接对象
 const con = mysql.createConnection(MYSQL_CONF);
+con.connect();
 
 // 开始连接
-con.connect();
+
 
 function exec(sql) {
   const promise = new Promise((resolve, reject) => {

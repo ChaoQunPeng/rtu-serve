@@ -50,23 +50,17 @@ app.use(function (err, req, res, next) {
   // res.status(err.status || 500);
   // res.render('error');
 
-  // 不知道要不要存到表里，就先存到文件吧
-  // let sql = ``;
-  // exec(sql).then();
+  res.status(500);
+  res.render('error');
 
-  // // create a write stream (in append mode) 先不用下面这个了吧。。
-  // var accessLogStream = fs.createWriteStream(path.join(__dirname+'\\log\\', 'access.log'), { flags: 'a' })
-  // // setup the logger
-  // app.use(logger('combined', { stream: accessLogStream }))
   console.log('程序出现错误，准备写入日志！');
   writeLogInFile(err, req, res);
-  
-  console.log(err);
-  res.json(new ErrorModel(
-    500,
-    err.msg ? err.msg : "程序出现错误！",
-    err
-  ));
+
+  // res.json(new ErrorModel(
+  //   err.code,
+  //   err.msg ? err.msg : "程序出现错误！",
+  //   err
+  // ));
 
 });
 

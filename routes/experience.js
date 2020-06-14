@@ -28,7 +28,6 @@ router.get('/info', (req, res, next) => {
 
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
-
   }).catch(err => {
     next(err);
   });

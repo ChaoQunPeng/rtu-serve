@@ -21,7 +21,6 @@ router.get('/', function (req, res, next) {
   // 返回 promise
   return exec(sql).then(result => {
     res.json(new SuccessModel(res.statusCode, '', result));
-
   }).catch(err => {
     next(err);
   });
