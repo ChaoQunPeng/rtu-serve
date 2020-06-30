@@ -4,7 +4,7 @@ const { exec } = require('../db/mysql');
 const { SuccessModel, ErrorModel } = require('../model/response-body');
 
 router.get('/', function (req, res, next) {
-  // res.send('skill list');
+  // s.SortIndex desc ,s.CreateDate
   let sql = `
   select 
     s.SkillID,Name,Theme,s.SortIndex,s.CreateDate,sum(Exp) as TotalExp 
@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
   group by 
     s.SkillID
   order by 
-    s.SortIndex desc ,s.CreateDate;
+    TotalExp desc;
   `;
 
   // 返回 promise
