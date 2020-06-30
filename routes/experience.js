@@ -112,6 +112,17 @@ router.put('/restore/:id', (req, res, next) => {
   });
 });
 
+router.put('/modify/:id', (req, res, next) => {
+  const id = req.params.id;
+  let sql = `update experience set SkillID = ${req.body.SkillID} where ExperienceID=${id}`;
+
+  return exec(sql).then(result => {
+    res.json(new SuccessModel(res.statusCode, '', result));
+  }).catch(err => {
+    next(err);
+  });
+});
+
 router.get('/detail/:experienceId', (req, res, next) => {
   const experienceId = req.params.experienceId;
 
